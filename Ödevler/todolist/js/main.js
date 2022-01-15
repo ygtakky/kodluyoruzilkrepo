@@ -17,7 +17,7 @@ function loadTasks(data) {
 }
 
 function liMaker(val) {
-  const li = `<li>${val}<span class="delete" onclick="deleteElement(event);">&#10060</span></li>`;
+  const li = `<li onclick="completed(event);">${val}<span class="close" onclick="deleteElement(event);">&#10005</span></li>`;
   if (list.innerHTML == "") {
     list.innerHTML = li;
   } else {
@@ -45,6 +45,7 @@ function deleteElement(event) {
   event.target.parentElement.remove();
 }
 
-function clearAll() {
-  localStorage.clear();
+function completed(event) {
+  let element = event.target;
+  element.classList.toggle("checked");
 }
