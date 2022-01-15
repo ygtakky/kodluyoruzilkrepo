@@ -49,6 +49,10 @@ ul li.checked::before {
   width: 7px;
 }
 
+ul li span {
+  float: right;
+}
+
 .close {
   position: absolute;
   right: 0;
