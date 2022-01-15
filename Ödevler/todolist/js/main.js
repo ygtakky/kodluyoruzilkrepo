@@ -29,13 +29,14 @@ function newElement() {
   const task = $("#task");
   let taskVal = task.val().trim();
   if (taskVal === "") {
-    alert("Yapılacak boş olamaz!");
+    $(".error").toast("show");
     return 0;
   }
   tasksArray.push(taskVal);
   localStorage.setItem("tasks", JSON.stringify(tasksArray));
   liMaker(taskVal);
   taskVal = "";
+  $(".success").toast("show");
 }
 
 function deleteElement(event) {
