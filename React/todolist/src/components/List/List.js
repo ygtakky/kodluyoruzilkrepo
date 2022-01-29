@@ -77,7 +77,7 @@ function List({ todos, setTodos }) {
               <input
                 className={`ListItem ${element.isCompleted ? "Completed" : ""}`}
                 value={editMode ? edit.value : element.value}
-                onFocus={() => setEditMode(true)}
+                onFocus={() => {setEditMode(true); setEdit(element.value)}}
                 onBlur={() => handleSubmit(element.value)}
                 onChange={handleEdit}
               />
