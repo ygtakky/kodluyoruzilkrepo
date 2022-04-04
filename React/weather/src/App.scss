@@ -1,0 +1,151 @@
+$borderColor: #ccc;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+#App {
+  min-height: 100vh;
+  max-width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $borderColor;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.938);
+}
+
+.app__header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(250, 255, 248);
+}
+
+.app__title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.app__city {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &__cityName {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-right: 10px;
+    }
+  }
+
+  &-form {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &-select {
+    height: 100%;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    padding: 10px;
+    align-self: flex-start;
+    font-size: 1rem;
+  }
+}
+
+.app__body {
+  width: 100%;
+  min-height: 210px;
+  min-width: inherit;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid $borderColor;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  &__content {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 10px;
+
+    &__title {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color:rgb(85, 84, 84);
+    }
+
+    &__temperatures {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 100%;
+
+      &__max {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color:rgb(61, 61, 61);
+      }
+      &__min {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color:rgb(121, 121, 121);
+      }
+    }
+    
+    &.current {
+      border: 1px solid $borderColor;
+      box-shadow: inset 0px 0px 2px $borderColor;
+      background-color: rgba(240, 240, 240, 0.096);
+    }
+  }
+}
