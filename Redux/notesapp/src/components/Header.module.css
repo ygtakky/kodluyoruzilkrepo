@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  padding: 2rem;
+}
+
+.search {
+  font-size: large;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.textArea {
+  width: 700px;
+  height: 200px;
+  resize: none;
+  border: none;
+  padding: 0;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.textButtons {
+  width: 680px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 3rem;
+  padding-left: 10px;
+}
+
+.colorButton {
+  height: 1.4rem;
+  width: 1.4rem;
+  border: none;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+
+.buttonRed {
+  background-color: red;
+}
+
+.buttonPurple {
+  background-color: purple;
+}
+
+.buttonYellow {
+  background-color: yellow;
+}
+
+.buttonBlue {
+  background-color: blue;
+}
+
+.buttonGreen {
+  background-color: greenyellow;
+}
+
+.button {
+  color: white;
+  background-color: green;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
