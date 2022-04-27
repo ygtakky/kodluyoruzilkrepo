@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10%;
 }
 
 .form {
@@ -13,21 +14,27 @@
 .search {
   font-size: large;
   padding: 1rem;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 8px;
 }
 
 .textArea {
+  font-size: 16px;
   width: 700px;
   height: 200px;
   resize: none;
   border: none;
-  padding: 0;
+  padding: 1rem;
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.textArea:focus {
+  outline: rgba(0, 0, 0, 0.4) solid 1px;
 }
 
 .textButtons {
-  width: 680px;
+  width: 710px;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -37,36 +44,50 @@
 }
 
 .colorButton {
+  appearance: none;
   height: 1.4rem;
   width: 1.4rem;
   border: none;
   border-radius: 50%;
   margin-right: 0.4rem;
   cursor: pointer;
+  transition: all 50ms ease-in-out;
+}
+
+.colorButton:checked {
+  outline: solid rgba(0, 0, 0, 0.8) 2px;
+}
+
+.colorButton:checked::before {
+  position: absolute;
+  content: "\00A0\2713\00A0";
+  font-weight: bolder;
+  font-size: 16px;
 }
 
 .buttonRed {
-  background-color: red;
+  background-color: #ff8fa5;
 }
 
 .buttonPurple {
-  background-color: purple;
+  background-color: #f7cbff;
 }
 
 .buttonYellow {
-  background-color: yellow;
+  background-color: #fffcb3;
 }
 
 .buttonBlue {
-  background-color: blue;
+  background-color: #b9fffd;
 }
 
 .buttonGreen {
-  background-color: greenyellow;
+  background-color: #aeffa2;
 }
 
 .button {
   color: white;
+  width: 4rem;
   background-color: green;
   padding: 0.6rem;
   border: none;
