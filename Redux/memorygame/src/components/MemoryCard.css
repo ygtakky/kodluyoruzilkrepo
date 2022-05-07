@@ -1,0 +1,41 @@
+.memoryCard {
+  height: 7rem;
+  width: 6rem;
+  font-size: xx-large;
+  background-color: transparent;
+  transition: transform 0.6ms ease;
+  cursor: pointer;
+}
+
+.memoryCard-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  border-radius: 8px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #6d94c4;
+  color: white;
+}
+
+.card-back {
+  background-color: #596353;
+  color: #e5e5e5;
+  transform: rotateY(180deg);
+}
